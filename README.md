@@ -85,9 +85,9 @@ std::unique_ptr to lang::Language
 |  +--bar.lang
 ```
 
-langcode = "en", "de", "fr" or "it"
-directory = "assets/lang"
-files = {"for.lang", bar.lang}
+langcode = "en", "de", "fr" or "it"  
+directory = "assets/lang"  
+files = {"for.lang", bar.lang}  
 
 
 # .lang Files
