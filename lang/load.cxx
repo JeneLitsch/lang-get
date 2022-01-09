@@ -71,7 +71,6 @@ namespace lang::load {
 				if(!std::all_of(line.begin(), line.end(), std::iswspace)) {
 					std::stringstream ls {line}; 
 					const auto [key, str] = readEntry(ls);
-					std::cout << key << " : " << str << "\n";
 					language.insert(key, str);
 				}
 			}
