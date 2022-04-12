@@ -1,6 +1,7 @@
 #pragma once
 #include <unordered_map>
 #include <string>
+#include <string_view>
 #include <memory>
 namespace lang {
 	class Language {
@@ -12,5 +13,7 @@ namespace lang {
 	};
 
 	void set(std::shared_ptr<Language> language);
+	const std::string get(const char * key);
 	const std::string get(const std::string & key);
+	const std::string get(const std::string_view key);
 }

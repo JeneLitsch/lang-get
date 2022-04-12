@@ -32,4 +32,12 @@ namespace lang {
 			return key;
 		}
 	}
+
+	const std::string get(const std::string_view key) {
+		return get(std::string(key));
+	}
+
+	const std::string get(const char * key) {
+		return get(std::string(key));
+	}
 }
