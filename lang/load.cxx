@@ -29,11 +29,11 @@ namespace lang::load {
 		}
 
 		char next(std::istream & in) {
-			const char chr = in.get();
+			const auto chr = in.get();
 			if(chr == '\\') {
 				return unescape(in);
 			}
-			return chr;
+			return static_cast<char>(chr);
 		}
 
 		std::string readValue(std::istream & in) {
