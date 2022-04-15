@@ -80,20 +80,13 @@ namespace lang::load {
 
 	std::unique_ptr<Language> language(	
 		const std::string_view & langCode,
-		const std::filesystem::path & directory,
-		const std::span<const std::filesystem::path> files) {
+		const std::filesystem::path & directory) {
 
 		auto language = std::make_unique<Language>();
-		for(const auto & file : files) {
-			const auto filepath = directory / langCode / file;
-			if(std::filesystem::exists(filepath)) {
-				std::ifstream fin(filepath);
-				loadFile(*language, fin);
-			}
-			else {
-				throw std::runtime_error{"Cannot open " + filepath.string()};
-			}
-
+		const auto dir = directory / langCode;
+		for(const auto & filepath : std::filesystem::directory_iterator(dir)) {
+			std::ifstream fin(filepath.path());
+			loadFile(*language, fin);
 		}
 		return language;
 	}
