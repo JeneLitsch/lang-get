@@ -23,8 +23,6 @@ Not meant to be used by the user in most cases.
 ## lang::get(...)
 Looks up a the text correspoding to a given std::string key.
 Returns the key if no entry in language matches the key.
-If the found text is another key the search continues recursively.
-This allows for delagating keys
 
 ### Parameters
 1) key as const std::string &
@@ -100,9 +98,3 @@ files = {"for.lang", bar.lang}
 "key1" : "text1"
 "key2" : "text2"
 ```
-
-```
-"key1" : "text1"
-"key2" : "key1"
-```
-Searching for "key2" returns "text1" because "key1" delegates the lookup. 
