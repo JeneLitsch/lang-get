@@ -4,7 +4,7 @@
 namespace lang {
 	const std::string Language::find(const std::string & key) const {
 		if(this->table.contains(key)) {
-			return find(this->table.at(key));
+			return this->table.at(key);
 		}
 		return key;
 	}
