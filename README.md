@@ -1,9 +1,5 @@
 # lang-get
 
-lang get has two headers 
-* load.hxx
-* langauge.hxx
-
 <br>
 <br>
 <br>
