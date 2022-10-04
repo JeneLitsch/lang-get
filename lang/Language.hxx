@@ -19,7 +19,5 @@ namespace lang {
 
 	void set(std::shared_ptr<Language> language);
 	const std::string get(const Key & key);
-	const std::string get(const char * key);
-	const std::string get(const std::string & key);
-	const std::string get(const std::string_view key);
+	// const std::string get(Key && key) = delete;
 }

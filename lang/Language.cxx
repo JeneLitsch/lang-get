@@ -57,16 +57,4 @@ namespace lang {
 			return key.str();
 		}
 	}
-
-	const std::string get(const std::string & key) {
-		return get(Key{key});
-	}
-
-	const std::string get(const std::string_view key) {
-		return get(Key{std::string{key}});
-	}
-
-	const std::string get(const char * key) {
-		return get(Key{key});
-	}
 }
